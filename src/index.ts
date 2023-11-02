@@ -1,1 +1,1 @@
-export { LongUtil } from './long.util';
+export * from './utils/long.util';
