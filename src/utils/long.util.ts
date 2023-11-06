@@ -1,17 +1,17 @@
 import Long from 'long';
 
+const POSTGRES_MAX_BIGINT = BigInt('9223372036854775807');
+const POSTGRES_MIN_BIGINT = BigInt('-9223372036854775808');
+
 export class LongUtil {
-  public static fromBigInt(num: bigint | undefined | null): Long | undefined {
-    if (num === undefined || num === null) {
+  public static fromBigInt(num: bigint) {
+    if (num > POSTGRES_MAX_BIGINT || num < POSTGRES_MIN_BIGINT) {
       return undefined;
     }
-    return Long.fromNumber(Number(num));
+    return Long.fromString(num.toString());
   }
 
-  public static toBigInt(num: Long | undefined | null): bigint | undefined {
-    if (num === undefined || num === null) {
-      return undefined;
-    }
-    return BigInt(num.toNumber());
+  public static toBigInt(num: Long) {
+    return BigInt(num.toString());
   }
 }
