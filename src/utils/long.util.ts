@@ -1,17 +1,17 @@
 import Long from 'long';
 
 export class LongUtil {
-  public static fromBigInt(num: bigint | undefined | null): Long | undefined {
-    if (num === undefined || num === null) {
+  public static fromBigInt(num: bigint) {
+    if (
+      num > BigInt('9223372036854775807') ||
+      num < BigInt('-9223372036854775808')
+    ) {
       return undefined;
     }
-    return Long.fromNumber(Number(num));
+    return Long.fromString(num.toString());
   }
 
-  public static toBigInt(num: Long | undefined | null): bigint | undefined {
-    if (num === undefined || num === null) {
-      return undefined;
-    }
-    return BigInt(num.toNumber());
+  public static toBigInt(num: Long) {
+    return BigInt(num.toString());
   }
 }
