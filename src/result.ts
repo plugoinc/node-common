@@ -43,8 +43,9 @@ export class Failure<E extends Error> {
  * if the result is a failure, throw the error.
  * if the result is a success, return the value.
  *
- * @param result x
- * @returns the value of the result
+ * @param result result to unwrap
+ * @throws error if the result is a failure
+ * @returns Success's property value
  */
 export const unwrap = <T, E extends Error>(result: Result<T, E>): T => {
   if (result.isFailure()) {
