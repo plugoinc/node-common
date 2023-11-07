@@ -11,11 +11,13 @@
     "test:cov": "jest --coverage"
   },
   "license": "MIT",
-  "dependencies": {
+  "peerDependencies": {
+    "lodash": "^4.17.21",
     "long": "^5.2.3"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
+    "@types/lodash": "^4.14.200",
     "@types/node": "^20.6.3",
     "@typescript-eslint/eslint-plugin": "^6.7.2",
     "@typescript-eslint/parser": "^6.7.2",
