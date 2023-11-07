@@ -8,7 +8,8 @@
     "build": "tsc",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:cov": "jest --coverage"
+    "test:cov": "jest --coverage",
+    "lint": "eslint \"src/**/*.ts\" --fix"
   },
   "license": "MIT",
   "dependencies": {
@@ -21,6 +22,7 @@
     "@typescript-eslint/parser": "^6.7.2",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-jsdoc": "^46.8.2",
     "eslint-plugin-prettier": "^5.0.0",
     "husky": "^8.0.3",
     "jest": "^29.7.0",
