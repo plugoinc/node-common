@@ -43,7 +43,9 @@ export class Failure<E extends Error> {
  * if the result is a failure, throw the error.
  * if the result is a success, return the value.
  *
- * @param result
+ * @param result result to unwrap
+ * @throws error if the result is a failure
+ * @returns Success's property value
  */
 export const unwrap = <T, E extends Error>(result: Result<T, E>): T => {
   if (result.isFailure()) {
@@ -56,8 +58,8 @@ export const unwrap = <T, E extends Error>(result: Result<T, E>): T => {
  * Wrapper for async functions.
  * If the promise resolves, return a success. If it rejects, return a failure.
  *
- * @param asyncFunc
- * @returns
+ * @param asyncFunc async function
+ * @returns a promise of a result
  */
 export const toResultAsync = async <T, E extends Error>(
   asyncFunc: Promise<T>,
