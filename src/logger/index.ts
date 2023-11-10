@@ -3,6 +3,8 @@ import { Logger as WinstonLogger, format, createLogger, config } from 'winston';
 import { JSONUtil } from 'src/utils/json.util';
 import { LoggerService } from './type';
 
+export { TransportGenerator } from './transport-generator';
+
 export class PlugoLogger implements LoggerService {
   private readonly logger: WinstonLogger;
   constructor(context?: string) {
