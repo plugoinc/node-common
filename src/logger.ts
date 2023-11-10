@@ -1,6 +1,6 @@
 import { ConsoleTransportInstance } from 'winston/lib/winston/transports';
 import { Logger as WinstonLogger, format, createLogger, config } from 'winston';
-import { JsonUtil } from 'src/utils/json.util';
+import { JSONUtil } from 'src/utils/json.util';
 
 type LogLevel = 'log' | 'error' | 'warn' | 'debug' | 'verbose';
 
@@ -68,7 +68,7 @@ export class PlugoLogger implements LoggerService {
       this.logger.info(message, ...meta);
       return;
     }
-    this.logger.info(JsonUtil.stringify(message));
+    this.logger.info(JSONUtil.stringify(message));
   }
 
   error(message: any);
@@ -78,7 +78,7 @@ export class PlugoLogger implements LoggerService {
       this.logger.error(message, ...meta);
       return;
     }
-    this.logger.error(JsonUtil.stringify(message));
+    this.logger.error(JSONUtil.stringify(message));
   }
 
   warn(message: any);
@@ -88,7 +88,7 @@ export class PlugoLogger implements LoggerService {
       this.logger.warn(message, ...meta);
       return;
     }
-    this.logger.warn(JsonUtil.stringify(message));
+    this.logger.warn(JSONUtil.stringify(message));
   }
 
   debug(message: any);
@@ -98,7 +98,7 @@ export class PlugoLogger implements LoggerService {
       this.logger.debug(message, ...meta);
       return;
     }
-    this.logger.debug(JsonUtil.stringify(message));
+    this.logger.debug(JSONUtil.stringify(message));
   }
 
   verbose(message: any);
@@ -108,6 +108,6 @@ export class PlugoLogger implements LoggerService {
       this.logger.verbose(message, ...meta);
       return;
     }
-    this.logger.verbose(JsonUtil.stringify(message));
+    this.logger.verbose(JSONUtil.stringify(message));
   }
 }
