@@ -1,6 +1,6 @@
 {
   "name": "@plugoinc/common",
-  "version": "0.1.4",
+  "version": "0.1.6",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,11 +9,13 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
-    "lint": "eslint \"src/**/*.ts\" --fix"
+    "lint": "eslint \"src/**/*.ts\" --fix",
+    "prepare": "husky install"
   },
   "license": "MIT",
   "dependencies": {
-    "long": "^5.2.3"
+    "long": "^5.2.3",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
@@ -52,5 +54,8 @@
   },
   "files": [
     "dist/**/*"
-  ]
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  }
 }
