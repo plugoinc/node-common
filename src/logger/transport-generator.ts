@@ -1,5 +1,6 @@
 import { format, transports } from 'winston';
 import { ConsoleTransportInstance } from 'winston/lib/winston/transports';
+import { LogLevel } from './type';
 
 export class TransportGenerator {
   /**
@@ -8,7 +9,7 @@ export class TransportGenerator {
    * @param level - The log level to use.
    * @returns A new instance of ConsoleTransportInstance.
    */
-  public static cli(level: string): ConsoleTransportInstance {
+  public static cli(level: LogLevel): ConsoleTransportInstance {
     return new transports.Console({
       level: level,
       format: format.combine(
