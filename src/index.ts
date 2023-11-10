@@ -1,2 +1,3 @@
-export * from './utils/long.util';
+export * from './utils';
 export * from './result';
+export * from './logger';
