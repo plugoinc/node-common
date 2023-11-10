@@ -1,6 +1,6 @@
 {
   "name": "@plugoinc/common",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -14,7 +14,8 @@
   },
   "license": "MIT",
   "dependencies": {
-    "long": "^5.2.3"
+    "long": "^5.2.3",
+    "winston": "^3.11.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.5",
