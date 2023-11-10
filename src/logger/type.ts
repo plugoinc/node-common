@@ -1,5 +1,6 @@
 export type LogLevel = 'log' | 'error' | 'warn' | 'debug' | 'verbose';
 
+// NOTE: This type comes from Nest.js @nestjs/common package
 export interface LoggerService {
   /**
    * Write a 'log' level log.
