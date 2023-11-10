@@ -19,6 +19,25 @@ This is a common library used for backend development at Plugo.
 npm install @plugoinc/common
 ```
 
+### 📖 Usage
+
+#### PlugoLogger
+
+```typescript
+import { PlugoLogger } from '@plugoinc/common';
+
+class Logger extends PlugoLogger {
+  getTransport() {
+    return new transports.Console({
+      level: 'debug',
+      format: format.combine(format.timestamp(), format.json()),
+    });
+  }
+}
+
+const logger = new MyLogger('AppService.name');
+```
+
 ## 🪪 License
 
 MIT
