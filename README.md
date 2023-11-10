@@ -9,6 +9,7 @@ This is a common library used for backend development at Plugo.
 - PlugoLogger
 - JsonUtil
 - ResultUtil
+- LongUtil
 
 ## 🚀 Getting Started
 
