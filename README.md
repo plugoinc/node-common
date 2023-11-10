@@ -1,10 +1,10 @@
 # @plugoinc/common
 
-## 📋 Description
-
 This is a common library used for backend development at Plugo.
 
 ## ✨ Features
+
+This library has following features.
 
 - Logger
 - Result
@@ -14,7 +14,7 @@ This is a common library used for backend development at Plugo.
 
 ### ⚙️ Prerequisites
 
-Node.js v18 or higher
+Use with Node.js v18 or higher
 
 ### 📦 Installation
 
