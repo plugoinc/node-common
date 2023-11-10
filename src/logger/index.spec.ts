@@ -1,5 +1,5 @@
 import { format, transports } from 'winston';
-import { PlugoLogger } from './logger';
+import { PlugoLogger } from '.';
 
 describe('PlugoLogger class', () => {
   it('should throw when getTransport is not implemented', () => {
