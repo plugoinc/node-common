@@ -24,5 +24,14 @@ describe('TransportGenerator', () => {
         format.combine(format.timestamp(), format.json()),
       );
     });
+    it('returns a ConsoleTransportInstance with the given info for datadog', () => {
+      const level = 'info';
+      const transport = TransportGenerator.dd(level);
+      expect(transport).toBeInstanceOf(transports.Console);
+      expect(transport.level).toBe(level);
+      expect(transport.format).toEqual(
+        format.combine(format.timestamp(), format.json()),
+      );
+    });
   });
 });
