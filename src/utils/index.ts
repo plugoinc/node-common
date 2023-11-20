@@ -1,2 +1,2 @@
 export * from './json.util';
-export * from './long.util';
+export * from './protobuf.util';
