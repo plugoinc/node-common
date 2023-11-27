@@ -65,11 +65,11 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/esm/types/index.d.ts",
+        "types": "./dist/esm/index.d.ts",
         "default": "./dist/esm/index.mjs"
       },
       "require": {
-        "types": "./dist/cjs/types/index.d.ts",
+        "types": "./dist/cjs/index.d.ts",
         "default": "./dist/cjs/index.js"
       }
     }
