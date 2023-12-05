@@ -42,3 +42,24 @@ describe('LongUtil', () => {
     });
   });
 });
+
+describe('TimestampUtil', () => {
+  it('Date <-> Timestamp', () => {
+    const now = new Date();
+    const timestamp = ProtobufUtil.dateToTimestamp(now);
+
+    expect(ProtobufUtil.timestampToDate(timestamp)).toEqual(now);
+  });
+
+  it('ISO8061 String <-> Timestamp', () => {
+    // 2023-12-05T09:17:16.878Z
+    const timestamp = {
+      seconds: Long.fromNumber(1701767836),
+      nanos: 878000000,
+    };
+
+    expect(ProtobufUtil.timestampToDate(timestamp)).toEqual(
+      new Date('2023-12-05T09:17:16.878Z'),
+    );
+  });
+});
