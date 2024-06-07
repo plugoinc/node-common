@@ -1,6 +1,6 @@
 import { Type, applyDecorators } from '@nestjs/common';
 import { ApiExtraModels, ApiOkResponse, getSchemaPath } from '@nestjs/swagger';
-import { PaginatedDto } from '../dto/paginated.dto';
+import { PaginatedDto } from '../dtos/paginated.dto';
 
 /**
  * 一覧取得APIのレスポンス用Decorator
