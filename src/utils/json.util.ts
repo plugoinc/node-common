@@ -19,8 +19,8 @@ export class JSONUtil {
   /**
    * Convert JSON object to string-able object.
    *
-   * @param data
-   * @returns
+   * @param data object
+   * @returns string-able object
    */
   public static toStringable(
     data: Record<string, any>,
