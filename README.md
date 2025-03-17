@@ -9,6 +9,7 @@ This library has following features.
 - Logger
 - Result
 - some utils
+- NestJS Decorators
 
 ## 🚀 Getting Started
 
@@ -90,6 +91,37 @@ promise = Promise.reject(new Error('Operation failed'));
 const result = await toResultAsync(promise);
 console.log(result.isFailure()); // true
 ```
+
+### NestJS Decorators
+
+#### TypedApiParam
+
+The TypedApiParam decorator is a type-safe wrapper around NestJS Swagger's @ApiParam decorator. It allows you to specify route parameters with type checking based on your DTO classes.
+
+```typescript
+import { Controller, Get } from '@nestjs/common';
+import { TypedApiParam } from '@plugoinc/common';
+
+class UserDto {
+  id: string;
+  name: string;
+}
+
+@Controller('users')
+class UserController {
+  @TypedApiParam<UserDto>({
+    name: 'id',
+    type: 'string',
+    description: 'User ID',
+  })
+  @Get(':id')
+  getUser(@Param() params: UserDto) {
+    // Implementation
+  }
+}
+```
+
+By using TypedApiParam, you get type checking for the `name` property, ensuring it matches a property from your DTO class.
 
 ## 🪪 License
 
